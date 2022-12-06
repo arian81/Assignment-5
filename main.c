@@ -25,7 +25,7 @@ char buf_in()
     {
 
         // Read a chunk of data from the file
-        last_read = read(fd_in, buffer_in, 16);
+        last_read = read(fd_in, buffer_in, BUFFER_SIZE);
 
         // If we reached the end of the file, return EOF
         if (last_read == 0)
@@ -63,10 +63,10 @@ void buf_out(char data)
     buf_pos++;
 
     // Check if the write buffer is full
-    if (buf_pos == 16)
+    if (buf_pos == BUFFER_SIZE)
     {
         // Write the contents of the buffer to the file
-        write(fd_out, buffer_out, 16);
+        write(fd_out, buffer_out, BUFFER_SIZE);
 
         // Reset the current write position in the buffer
         buf_pos = 0;

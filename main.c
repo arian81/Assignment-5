@@ -141,7 +141,7 @@ int main()
     // close(fd_out);
     // printf("\n");
     // ===============================Evaluation================================
-    fname_in = "beemovie.txt"; // Set the input file name
+    fname_in = "loremipsum.txt"; // Set the input file name
     fd_in = open(fname_in, O_RDONLY);
     if (fd_in == -1)
     {
@@ -149,7 +149,7 @@ int main()
         perror("Error opening file");
         return -1;
     }
-    fname_out = "beemoviecopy.txt";
+    fname_out = "loremipsumcopy.txt";
     fd_out = open(fname_out, O_WRONLY | O_CREAT, S_IRUSR | S_IWUSR);
     if (fd_out == -1)
     {

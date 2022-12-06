@@ -172,7 +172,7 @@ int main()
     close(fd_out);
     
 
-    int system_return = system("diff beemovie.txt beemoviecopy.txt");
+    int system_return = system("diff loremipsum.txt loremipsumcopy.txt");
     if (system_return == 0)
     {
         printf("The files are identical\n");
